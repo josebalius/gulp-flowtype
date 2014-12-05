@@ -52,6 +52,7 @@ function executeFlow(PATH, flowArgs, callback) {
       return error.message.length > 0;
     });
     if (result.errors.length) {
+      gutil.beep();
       passed = false;
       reporter(flowToJshint(result));
     }
